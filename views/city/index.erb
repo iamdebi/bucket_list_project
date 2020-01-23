@@ -1,0 +1,24 @@
+<a class="padding-left button" href="/cities/new">Add City</a>
+<div class="city city-container">
+<% for city in @cities %>
+<div class ="city-tile">
+  <h1><a href="/cities/<%= city.id %>"><%= city.name %></a></h1>
+    <div class="city-title">
+
+      <div class="container-visit-cities">
+        <h3>Visited?</h3>
+          <% if city.visit === "t" %>
+            <div class="tick-box tick-box--active"></div>
+          <% elsif city.visit === "f"  %>
+            <div class="tick-box"></div>
+          <% end %>
+      </div>
+
+      <h5>
+        <a href="/cities/<%= city.id %>/attractions">Attractions</a>
+      </h5>
+
+    </div>
+</div>
+<% end %>
+</div>

@@ -1,0 +1,12 @@
+<h1>Continents</h1>
+
+<div class="continent continent-container">
+  <% for continent in @continents %>
+  <div class ="continent-tile">
+    <div class="continent-image" style="background-image: url(<%= continent.img  %>)"></div>
+    <div class="continent-title">
+      <a class ="button" href="/continents/<%= continent.id  %>"><%= continent.name%></a>
+    </div>
+  </div>
+  <% end %>
+</div>

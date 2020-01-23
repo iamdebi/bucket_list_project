@@ -1,0 +1,15 @@
+<form action="/attractions" method="POST">
+  <label for="name">Name:</label>
+  <input class="button" required type="text" name="name">
+
+  <label> Select the city: </label>
+    <select class="button" name="city_id">
+      <option select disabled value="">Please select a city</option>
+      <% for city in @cities %>
+      <option required value="<%= city.id %>"> <%= city.name %> </option>
+      <% end %>
+    </select>
+
+
+    <button class="button" type="submit" value="Add Attraction">Add Attraction</button>
+</form>

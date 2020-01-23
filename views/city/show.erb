@@ -1,0 +1,17 @@
+<div>
+  <h2><%= @city.name %></h2>
+</div>
+
+
+<div>
+  <form action="/cities/<%= @city.id %>/delete" method="POST">
+  <button type="submit" delete ="delete">Delete</button>
+  </form>
+  <a class="button" href="/cities/<%= @city.id %>/edit">Edit</a>
+</div>
+
+<ul>
+  <% for attraction in @city.view_attractions() %>
+  <li><a href="/attractions/<%= attraction.id %>"> <%=attraction.name%> </a></li>
+  <% end %>
+</ul>

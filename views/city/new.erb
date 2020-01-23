@@ -1,0 +1,21 @@
+<form action="/cities" method="POST">
+  <label for="name">Name:</label>
+  <input class="button" required type="text" name="name">
+
+  <label>Select the country:</label>
+    <select class="button" name="country_id" id="country-id">
+        <option selected disabled value="">Please select a country</option>
+      <% for country in @country %>
+        <option required value="<%= country.id %>"><%= country.name %></option>
+      <% end %>
+    </select>
+
+    <label>Have you visited</label>
+    <label>Yes</label>
+      <input class="tick-box" type="radio" name="visit" value="true">
+      <label>Not yet</label>
+      <input class="tick-box" type="radio" name="visit" value="false">
+
+
+  <button class="button" type="submit" value="Add City">Add Country</button>
+</form>
